@@ -32,6 +32,8 @@
 
 package com.elex_project.dwarf;
 
+import java.util.Optional;
+
 /**
  * Property has a value,
  * and notify to listeners when the value is changed.
@@ -54,6 +56,8 @@ public interface Property<T> {
 	 * @return value
 	 */
 	public T get();
+
+	public Optional<T> optional();
 
 	/**
 	 * Add a listener

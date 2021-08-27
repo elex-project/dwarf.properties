@@ -38,6 +38,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Optional;
 
 /**
  * Base class for properties
@@ -91,6 +92,11 @@ abstract class AbsProperty<T> implements Property<T>, Serializable {
 	@Nullable
 	public T get() {
 		return value;
+	}
+
+	@Override
+	public Optional<T> optional() {
+		return Optional.ofNullable(value);
 	}
 
 	@Override
